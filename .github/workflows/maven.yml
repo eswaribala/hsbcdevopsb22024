@@ -30,7 +30,7 @@ jobs:
       #if: github.ref == 'refs/heads/projects'
       run: 
         git merge projects
-        cd hospitalmanagement
-        mvn -B clean install -DskipTests --file pom.xml
+        
+        mvn -B clean install -DskipTests --file ./hospitalmanagement/pom.xml
 
     
