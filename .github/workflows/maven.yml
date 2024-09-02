@@ -29,7 +29,9 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      if: github.ref == 'refs/heads/projects'
-      run: mvn -B clean install -DskipTests --file ./hospitalmanagement/pom.xml
+      #if: github.ref == 'refs/heads/projects'
+      run: 
+        git switch projects
+        mvn -B clean install -DskipTests --file ./hospitalmanagement/pom.xml
 
     
