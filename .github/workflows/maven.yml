@@ -9,9 +9,7 @@
 name: Java CI with Maven
 
 on:
-  push:
-    branches:
-      - projects
+  
   pull_request:
     branches: [ "projects" ]
   workflow_dispatch:
@@ -32,6 +30,7 @@ jobs:
       #if: github.ref == 'refs/heads/projects'
       run: 
         git switch projects
-        mvn -B clean install -DskipTests --file ./hospitalmanagement/pom.xml
+        cd hospitalmanagement
+        mvn -B clean install -DskipTests --file pom.xml
 
     
