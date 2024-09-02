@@ -13,7 +13,14 @@ on:
   pull_request:
     branches: [ "projects" ]
   workflow_dispatch:
+
+ 
 jobs:
+  merge:
+   runs-on: ubuntu-latest
+   steps:
+   - name: Merge
+     run: git merge projects
   build:
 
     runs-on: ubuntu-latest
