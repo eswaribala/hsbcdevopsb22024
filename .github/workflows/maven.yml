@@ -28,5 +28,6 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B clean install -DskipTests --file ./hospitalmanagement/pom.xml
-
+    - name: Run the Spring Boot Project
+      run: java -jar -Dserver.port=7076 ./hospitalmanagement/target/hospitalmanagement-0.0.1-SNAPSHOT.jar
    
