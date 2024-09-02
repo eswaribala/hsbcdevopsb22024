@@ -16,11 +16,7 @@ on:
 
  
 jobs:
-  merge:
-   runs-on: ubuntu-latest
-   steps:
-   - name: Merge
-     run: git merge projects
+  
   build:
 
     runs-on: ubuntu-latest
